@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head><title>Programa de Estadística</title>
+<meta charset="utf-8"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="apexcharts.css">
+<script src="apexcharts.js"></script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- - - - MAIN - - - -->
+
+<main>
+
+<div class="title">Tabla De Distribución De Frecuencias</div>
+<div class="text">Programa que genera una tabla de distribución de frecuencias a partir de un conjunto de datos</div>
+
+</main>
+
+<div class="form">
+
+<div class="text" style="text-align: left; margin-bottom: 2rem;">Ingrese los datos (separados por espacio)</div>
+<textarea class="datos" id="datos" name="datos" rows="4" cols="50"></textarea>
+<div style="display: flex; justify-content: center;"><button class="button" onclick="generate()">Generar tabla</button></div>
+
+</div>
+
+<!-- - - - TABLE - - - -->
+
+<div class="table" id="table">
+	
+<div class="medidas_disper">
+<p>Media: <span class="dato" id="media">0</span></p>
+<p>Mediana: <span class="dato" id="mediana">0</span></p>
+<p>Moda: <span class="dato" id="moda">0</span></p>
+</div>
+
+<div class="datos_tabla">
+<p>Rango: <span class="dato" id="rango">0</span></p>
+<p>Intervalo: <span class="dato" id="intervalo">0</span></p>
+<p>Clases: <span class="dato" id="clases">0</span></p>
+<p>Ajuste: <span class="dato" id="ajuste">0</span></p>
+</div>
+
+<div class="tabla_fr">
+
+<table cellpadding="0" cellspacing="0" id="tabla_fr">
+
+<thead><tr>
+	<td colspan="2">L.C</td>
+	<td colspan="2">L.R.C</td>
+	<td>M</td>
+	<td>F</td>
+	<td>F.a</td>
+	<td>F.r</td>
+	<td>F.a.r</td>
+	<td>M*F</td>
+	<td>|M-Mμ|</td>
+	<td>F|M-Mμ|</td>
+	<td>F|M-Mμ|²</td>
+</tr></thead>
+
+<tbody><tr>
+	<td>inf.</td>
+	<td>sup.</td>
+	<td>inf.</td>
+	<td>sup.</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr></tbody></table>
+
+</div>
+
+<div class="datos_tabla">
+<p>Mμ: <span class="dato" id="mu">0</span></p>
+<p>Varianza: <span class="dato" id="varianza">0</span></p>
+<p>Desviación estándar: <span class="dato" id="desviacion_e">0</span></p>
+<p>Desviación media: <span class="dato" id="desviacion_m">0</span></p>
+<p>Desviación cuartil: <span class="dato" id="desviacion_c">0</span></p>
+</div>
+
+<div class="grafica"><div style="width: 75%; background-color: #FFFFFF; border-radius: 1rem; padding: 1rem;" id="chart"></div></div>
+
+</div>
+
+<div class="name">José Mario Peña Ledesma 6-A</div>
+
+<!-- - - - SCRIPT - - - -->
+
+<script src="script.js"></script>
+<script src="graphic.js"></script>
+
+</body></html>
